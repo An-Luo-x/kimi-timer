@@ -1,0 +1,40 @@
+{
+  "name": "kimi-timer",
+  "version": "1.0.0",
+  "description": "A minimal and elegant desktop timer for Windows built with Electron.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "com.kimi.timer.desktop",
+    "productName": "Kimi Timer",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": {
+        "target": "portable",
+        "arch": ["x64"]
+      },
+      "icon": "assets/chronometer.ico"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "package.json",
+      "assets/**/*",
+      "node_modules/**/*"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^42.5.0",
+    "electron-builder": "^26.15.3"
+  }
+}
